@@ -1,7 +1,9 @@
 "use strict";
 $(document).ready(function () {
 
-    
+    $('.btn').click(function (e) {
+        e.preventDefault();
+
         let input = $("input");
         let value = input.value.trim();
         if (value !== "") {
@@ -11,5 +13,7 @@ $(document).ready(function () {
             $("#list").appendChild(div);
         
         }
+        input.value = "";
+    
     });
-        
+});  
