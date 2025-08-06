@@ -8,12 +8,14 @@ $(document).ready(function () {
         let value = input.value.trim();
         if (value !== "") {
             let div = $("div");
-            div.className = "todo-item";
-            div.textContent = value;
-            $("#list").appendChild(div);
+            for (let i = 0; i < value.length; i++) {
+                let span = $("<span></span>");
+                span.text(value[i]);
+                div.append(span);       
+            }
         
         }
-        input.value = "";
+        input.val("");
     
     });
 });  
